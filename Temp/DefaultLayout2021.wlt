@@ -380,7 +380,7 @@ MonoBehaviour:
   m_LastFolders:
   - Packages/com.unity.learn.iet-framework.authoring
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\Unity Game Projects\CS-458-VRGame
+  m_LastProjectPath: D:\Github\CS458VR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
