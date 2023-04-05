@@ -10,16 +10,21 @@ public class Happiness : MonoBehaviour
     public float HappinessTime;
     public Hunger hunger;
 
+    public bool isHappy;
+
+    public GameObject hapBubble;
+
     private void Start()
     {
         //Checks if the monster is hungry
         InvokeRepeating("checkIfHungry", 1.0f, HappinessTime);
+        InvokeRepeating("checkHappy", 1.0f, 1.0f);
     }
     void checkIfHungry()
     {
         Debug.Log("\nHappiness: " + HappinessValue);
         //If they are hungry decrease happiness
-        if (hunger.HungerValue <= 0)
+        if (hunger.HungerValue < hunger.HungerMax * 0.2)
         {
             decHappiness();
         }
@@ -36,5 +41,17 @@ public class Happiness : MonoBehaviour
     void incHappiness()
     {
         HappinessValue += HappinessRate;
+    }
+
+    void checkHappy()
+    {
+        if (HappinessValue <= 0)
+        {
+            HappinessValue = 0;
+            isHappy = false;
+            hapBubble.SetActive(true);
+        }
+        else
+            hapBubble.SetActive(false);
     }
 }

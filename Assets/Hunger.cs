@@ -10,11 +10,14 @@ public class Hunger : MonoBehaviour
     public float HungerTime;
     public float HungerStart;
 
+    public GameObject hungBubble;
+
     public bool isHungry;
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("decHunger", HungerStart, HungerTime);
+        InvokeRepeating("checkHunger", 1,1);
     }
 
     //Decrease hunger to a minimum of 0
@@ -70,9 +73,12 @@ public class Hunger : MonoBehaviour
 
     private void checkHunger()
     {
-        if(HungerValue < HungerMax * 0.2)
+        if (HungerValue < HungerMax * 0.2)
         {
             isHungry = true;
+            hungBubble.SetActive(true);
         }
+        else
+            hungBubble.SetActive(false);
     }
 }

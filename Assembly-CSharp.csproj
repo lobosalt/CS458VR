@@ -58,19 +58,19 @@
   <ItemGroup>
     <Compile Include="Assets\Kawaii Slimes\Scripts\AI\Face.cs" />
     <Compile Include="Assets\Kawaii Slimes\Scripts\GameManager.cs" />
+    <Compile Include="Assets\characterHold.cs" />
+    <Compile Include="Assets\JellyMesh.cs" />
     <Compile Include="Assets\Kawaii Slimes\Cameras\Scripts\FreeLookCam.cs" />
+    <Compile Include="Assets\searchFood.cs" />
     <Compile Include="Assets\Happiness.cs" />
     <Compile Include="Assets\Kawaii Slimes\Cameras\Scripts\PivotBasedCameraRig.cs" />
+    <Compile Include="Assets\slimePlay.cs" />
     <Compile Include="Assets\XRPlatformControllerSetup.cs" />
+    <Compile Include="Assets\FoodSpoil.cs" />
+    <Compile Include="Assets\WanderAI.cs" />
     <Compile Include="Assets\Kawaii Slimes\Cameras\Scripts\AbstractTargetFollower.cs" />
     <Compile Include="Assets\Hunger.cs" />
     <Compile Include="Assets\Kawaii Slimes\Scripts\AI\EnemyAi.cs" />
-    <Compile Include="Assets\FoodSpoil.cs" />
-    <Compile Include="Assets\JellyMesh.cs" />
-    <Compile Include="Assets\WanderAI.cs" />
-    <Compile Include="Assets\searchFood.cs" />
-    <Compile Include="Assets\slimePlay.cs" />
-    <Compile Include="Assets\characterHold.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Kawaii Slimes\Shader\UnityURPToonLitShader\NiloZOffset.hlsl" />

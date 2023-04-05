@@ -13,34 +13,32 @@ public class WanderAI : MonoBehaviour
     private bool isRotLeft = false;
     private bool isRotRight = false;
     private bool isWalking = false;
+    public bool isPlaying = false;
 
     public Rigidbody slimeBody;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (isWandering == false)
+        if (isPlaying == false)
         {
-            StartCoroutine(Wander());
-        }
-        if(isRotRight == true)
-        {
-            transform.Rotate(transform.up * Time.deltaTime * rotSpeed);
-        }
-        if (isRotLeft == true)
-        {
-            transform.Rotate(transform.up * Time.deltaTime * -rotSpeed);
-        }
-        if (isWalking == true)
-        {
-            slimeBody.AddForce(Vector3.up * jumpSpeed * Time.deltaTime, ForceMode.Impulse);
-            transform.position += (transform.forward * moveSpeed * Time.deltaTime);
-            slimeBody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            if (isWandering == false)
+            {
+                StartCoroutine(Wander());
+            }
+            if (isRotRight == true)
+            {
+                transform.Rotate(transform.up * Time.deltaTime * rotSpeed);
+            }
+            if (isRotLeft == true)
+            {
+                transform.Rotate(transform.up * Time.deltaTime * -rotSpeed);
+            }
+            if (isWalking == true)
+            {
+                slimeBody.AddForce(Vector3.up * jumpSpeed * Time.deltaTime, ForceMode.Impulse);
+                transform.position += (transform.forward * moveSpeed * Time.deltaTime);
+                slimeBody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
         }
     }
 
